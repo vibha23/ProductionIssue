@@ -1,7 +1,7 @@
 package com.productionissuemang.issue.service;
 
-import com.productionissuemang.issue.VO.Project;
-import com.productionissuemang.issue.VO.ResponseTemplateVO;
+//import com.productionissuemang.issue.VO.Project;
+//import com.productionissuemang.issue.VO.ResponseTemplateVO;
 import com.productionissuemang.issue.entity.ProductionIssue;
 import com.productionissuemang.issue.repository.ProductionIssueRepository;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+//import org.springframework.web.client.RestTemplate;
 
 @Service
 @Slf4j
@@ -20,8 +20,9 @@ public class ProductionIssueService {
     @Autowired
     private ProductionIssueRepository productionIssueRepository;
     
-    @Autowired
+   /* @Autowired
     private RestTemplate restTemplate;
+    */
 
     public ProductionIssue saveIssue(ProductionIssue productionIssue) {
         log.info("Inside saveIssue of ProductionIssueService");
@@ -33,7 +34,7 @@ public class ProductionIssueService {
         return productionIssueRepository.findAll();
     }
     
-    public ResponseTemplateVO getIssueWithProject(Long productionIssueId) {
+   /* public ResponseTemplateVO getIssueWithProject(Long productionIssueId) {
     log.info("Inside getIssueWithProject of ProductionIssueService");
     ResponseTemplateVO vo = new ResponseTemplateVO();
     ProductionIssue productionIssue = productionIssueRepository.findByProductionIssueId(productionIssueId);
@@ -50,7 +51,7 @@ public class ProductionIssueService {
     vo.setProductionIssue(productionIssue);
 
     return  vo;
-    }
+    }*/
 
     public ProductionIssue findByProductionIssueId(Long productionIssueId) {
         log.info("Inside findByProductionIssueId of ProductionIssueService");

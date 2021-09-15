@@ -1,6 +1,6 @@
 package com.productionissuemang.issue.controller;
 
-import com.productionissuemang.issue.VO.ResponseTemplateVO;
+//import com.productionissuemang.issue.VO.ResponseTemplateVO;
 import com.productionissuemang.issue.entity.ProductionIssue;
 import com.productionissuemang.issue.service.ProductionIssueService;
 
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/productionissue")
+@CrossOrigin(origins = "http://localhost:4200")
 @Slf4j
 public class ProductionIssueController {
 
@@ -26,11 +27,11 @@ public class ProductionIssueController {
     }
 
 
-    @GetMapping("/{id}")
+   /* @GetMapping("/{id}")
     public ResponseTemplateVO getIssueWithProduct(@PathVariable("id") Long issueId) {
         log.info("Inside ProductionIssueController of ProductionIssueController");
         return productionIssueService.getIssueWithProject(issueId);
-    }
+    }*/
     
     @GetMapping(path="/allissue")
     public  List<ProductionIssue> getIssue() {

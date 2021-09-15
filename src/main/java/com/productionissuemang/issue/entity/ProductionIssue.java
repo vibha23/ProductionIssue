@@ -29,6 +29,6 @@ public class ProductionIssue {
     private String issueDescription;
     @Column(nullable = false,length = 100)
     private String comment;
-    private Long projectId;
+   
 	
 }
